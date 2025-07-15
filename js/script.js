@@ -27,19 +27,6 @@ galeria.forEach(img => {
 
 
 
-// --- Scroll suave para navegadores antiguos ---
-document.querySelectorAll('a[href^="#"]').forEach(enlace => {
-  enlace.addEventListener('click', function(e) {
-    e.preventDefault();
-    const destino = document.querySelector(this.getAttribute('href'));
-    if (destino) {
-      destino.scrollIntoView({ behavior: 'smooth' });
-    }
-  });
-});
-
-
-
 // --- Gatito aleatorio en el hero ---
 const gatitoImg = document.getElementById('gatito-random');
 const cambiarBtn = document.getElementById('cambiar-gatito');
@@ -71,6 +58,8 @@ window.addEventListener('DOMContentLoaded', obtenerGatitoAleatorio);
 
 // Cambiar gatito con el botón
 cambiarBtn.addEventListener('click', obtenerGatitoAleatorio);
+
+
 
 const gatitoImgSecundario = document.getElementById('gatito-random-secundario');
 
