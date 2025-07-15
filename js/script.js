@@ -6,6 +6,8 @@ menuToggle.addEventListener('click', () => {
   navMenu.classList.toggle('activo');
 });
 
+
+
 // --- Galería animada (fade-in) ---
 const galeria = document.querySelectorAll('.gallery-grid img');
 
@@ -23,6 +25,8 @@ galeria.forEach(img => {
   observer.observe(img);
 });
 
+
+
 // --- Scroll suave para navegadores antiguos ---
 document.querySelectorAll('a[href^="#"]').forEach(enlace => {
   enlace.addEventListener('click', function(e) {
@@ -33,6 +37,8 @@ document.querySelectorAll('a[href^="#"]').forEach(enlace => {
     }
   });
 });
+
+
 
 // --- Gatito aleatorio en el hero ---
 const gatitoImg = document.getElementById('gatito-random');
@@ -68,7 +74,7 @@ cambiarBtn.addEventListener('click', obtenerGatitoAleatorio);
 
 const gatitoImgSecundario = document.getElementById('gatito-random-secundario');
 
-// Nuevo grupo de imágenes
+// Gatitos de la esquina inferior izquierda
 const gatitosInferiores = [
   './assets/img/gatitol1.png',
   './assets/img/gatitol2.png',
@@ -92,7 +98,7 @@ function obtenerGatitoInferiorAleatorio() {
 // Mostrar uno al cargar
 window.addEventListener('DOMContentLoaded', obtenerGatitoInferiorAleatorio);
 
-// Cambiar al hacer clic también
+// Cambiar al hacer clic
 cambiarBtn.addEventListener('click', obtenerGatitoInferiorAleatorio);
 
 // Cambiar párrafo
