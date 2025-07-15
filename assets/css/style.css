@@ -1,0 +1,91 @@
+/* ------------------------------
+   VARIABLES: Paleta y Diseño Base
+------------------------------- */
+:root {
+  /* Colores */
+  --color-fondo: #fffaf5;
+  --color-primario: #d4a373;      /* Café con leche */
+  --color-secundario: #faedcd;    /* Crema */
+  --color-acento: #6c584c;        /* Marrón oscuro (texto fuerte) */
+  --color-texto: #333;
+  --color-blanco: #fff;
+
+  /* Tipografía */
+  --fuente-principal: 'Segoe UI', 'Poppins', sans-serif;
+  --fuente-secundaria: 'Georgia', serif;
+
+  /* Espaciado */
+  --espaciado: 1.5rem;
+
+  /* Otros */
+  --radio-borde: 12px;
+  --sombra-suave: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ------------------------------
+   RESET BÁSICO
+------------------------------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--fuente-principal);
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.6;
+}
+
+/* ------------------------------
+   LAYOUT GENERAL
+------------------------------- */
+section {
+  padding: var(--espaciado);
+  max-width: 1200px;
+  margin: auto;
+}
+
+h1, h2 {
+  color: var(--color-acento);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+p {
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+img {
+  max-width: 100%;
+  border-radius: var(--radio-borde);
+}
+
+
+/* ------------------------------
+   RESPONSIVO
+------------------------------- */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .hero h1 {
+    font-size: 2.25rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+
+

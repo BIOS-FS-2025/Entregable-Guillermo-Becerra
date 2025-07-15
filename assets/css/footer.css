@@ -1,0 +1,16 @@
+/* ------------------------------
+   FOOTER
+------------------------------- */
+footer {
+  text-align: center;
+  background-color: var(--color-secundario);
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+footer .social a {
+  margin: 0 0.5rem;
+  text-decoration: none;
+  color: var(--color-acento);
+  font-weight: 500;
+}

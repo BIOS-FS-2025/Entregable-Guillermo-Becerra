@@ -1,0 +1,74 @@
+/* ------------------------------
+   HEADER Y NAV
+------------------------------- */
+header {
+  background-color: var(--color-secundario);
+  padding: 1rem var(--espaciado);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow: var(--sombra-suave);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--color-acento);
+}
+
+.logo a {
+  text-decoration: none;
+  color: var(--color-acento);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--color-acento);
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: var(--color-primario);
+}
+
+/* ----- Menú hamburguesa ----- */
+#menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-acento);
+}
+
+@media (max-width: 768px) {
+  #menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    width: 100%;
+  }
+
+  nav.activo {
+    display: block;
+    margin-top: 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+}

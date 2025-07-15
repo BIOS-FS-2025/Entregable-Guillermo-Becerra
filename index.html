@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi página</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/headernav.css">
+  <link rel="stylesheet" href="./assets/css/hero.css">
+  <link rel="stylesheet" href="./assets/css/about.css">
+  <link rel="stylesheet" href="./assets/css/gallery.css">
+  <link rel="stylesheet" href="./assets/css/menu.css">
+  <link rel="stylesheet" href="./assets/css/testimonials.css">
+  <link rel="stylesheet" href="./assets/css/contact.css">
+  <link rel="stylesheet" href="./assets/css/footer.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="logo"><a href="#hero">🐾 Catpuccino</a></div>
+    <button id="menu-toggle" aria-label="Abrir menú">☰</button>
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="#hero">Inicio</a></li>
+        <li><a href="#about">Nosotros</a></li>
+        <li><a href="#gallery">Gatitos</a></li>
+        <li><a href="#menu">Menú</a></li>
+        <li><a href="#testimonials">Comentarios</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <!-- Hero -->
+  <section id="hero" class="hero">
+    <h1>¡Guillermo Becerra te da la bienvenida a Catpuccino!</h1>
+    <p id="parrafo-hero">Un rincón acogedor para amantes del café y los gatos...</p>
+    <div class="hero-buttons">
+      <a href="#contact" class="btn">Reservar ahora</a>
+      <button id="cambiar-gatito" class="btn secundario">Cambiar gatitos</button>
+    </div>  
+
+    <!-- Gatitos aleatorios -->
+     <img id="gatito-random" class="gatito-deco" src="" alt="Gatito decorativo">
+     <img id="gatito-random-secundario" class="gatito-deco inferior" src="" alt="Otro gatito decorativo">
+  </section>
+
+  <!-- Sobre Nosotros -->
+  <section id="about" class="about">
+    <h2>🐾 Sobre Nosotros 🐾</h2>
+    <p>Somos una cafetería temática donde podés relajarte entre gatos rescatados mientras disfrutás un buen café artesanal.</p>
+    <img src="./assets/img/free-photo-of-cat-lying-on-pillow-of-sidewalk-cafe.jpeg" alt="Interior del cat café con gatos">
+  </section>
+
+  <!-- Galería de Gatitos -->
+  <section id="gallery" class="gallery">
+    <h2>🐾 Conocé a nuestros gatitos 🐾</h2>
+    <div class="gallery-grid">
+      <!-- Imágenes individuales -->
+      <img src="./assets/img/tabby-cat.jpg" alt="Gato 1">
+      <img src="./assets/img/orange-cat.jpg" alt="Gato 2">
+      <img src="./assets/img/black-cat.jpg" alt="Gato 3">
+      <img src="./assets/img/orange-cat-2.png" alt="Gato 4">
+      <img src="./assets/img/white-cat.jpg" alt="Gato 5">
+      <img src="./assets/img/siamese-cat.jpg" alt="Gato 6">
+    </div>
+  </section>
+
+  <!-- Menú -->
+  <section id="menu" class="menu">
+    <h2>🐾 Menú 🐾</h2>
+    <ul>
+      <li>☕ Café Latte - $180</li>
+      <li>🍰 Tarta de zanahoria - $220</li>
+      <li>🫖 Té chai - $150</li>
+      <li>🥐 Croissant de almendras - $200</li>
+    </ul>
+  </section>
+
+  <!-- Testimonios -->
+  <section id="testimonials" class="testimonials">
+    <h2>🐾 Lo que dicen nuestros visitantes 🐾</h2>
+    <blockquote>
+      "Un lugar mágico. ¡Los gatos son amorosos y el café delicioso!" – Sofía
+    </blockquote>
+    <blockquote>
+      "Ideal para relajarse después del trabajo. Siempre limpio y cálido." – Marcos
+    </blockquote>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contact" class="contact">
+    <h2>🐾 Contacto & Reservas 🐾</h2>
+    <form>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Catpuccino. Todos los derechos reservados.</p>
+    <div class="social">
+      <a href="#">Instagram</a>
+      <a href="#">Facebook</a>
+    </div>
+  </footer>
+
+  <script src="./js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+/* ------------------------------
+   MENÚ
+------------------------------- */
+.menu {
+  margin-top: 5rem;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.menu li {
+  background-color: var(--color-secundario);
+  margin: 2rem auto;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radio-borde);
+  box-shadow: var(--sombra-suave);
+  max-width: 400px;
+  font-size: 1.3rem;
+}
