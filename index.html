@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mi página</title>
+
+  <!-- Estilos de cada sección -->
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="./assets/css/headernav.css">
   <link rel="stylesheet" href="./assets/css/hero.css">
@@ -17,9 +19,10 @@
 
 <body>
 
+  <!-- Header y nav -->
   <header>
-    <div class="logo"><a href="#hero">🐾 Catpuccino</a></div>
-    <button id="menu-toggle" aria-label="Abrir menú">☰</button>
+    <div class="logo"><a href="#">🐾 Catppuccino</a></div>
+    <button id="menu-burger" aria-label="Abrir menú">☰</button>
     <nav id="nav-menu">
       <ul>
         <li><a href="#hero">Inicio</a></li>
@@ -35,36 +38,54 @@
 
   <!-- Hero -->
   <section id="hero" class="hero">
-    <h1>¡Guillermo Becerra te da la bienvenida a Catpuccino!</h1>
-    <p id="parrafo-hero">Un rincón acogedor para amantes del café y los gatos...</p>
+    <h1>¡Guillermo Becerra te da la bienvenida a Catppuccino!</h1>
+    <p id="hero-text">Un rincón acogedor para amantes del café y los gatos...</p>
     <div class="hero-buttons">
       <a href="#contact" class="btn">Reservar ahora</a>
-      <button id="cambiar-gatito" class="btn secundario">Cambiar gatitos</button>
+      <button id="cat-change" class="btn secondary">Cambiar gatitos</button>
     </div>  
 
     <!-- Gatitos aleatorios -->
-     <img id="gatito-random" class="gatito-deco" src="" alt="Gatito decorativo">
-     <img id="gatito-random-secundario" class="gatito-deco inferior" src="" alt="Otro gatito decorativo">
+     <img id="random-cat-r" class="cat-r" src="./assets/img/gatitor1.png" alt="Gatito que cambia aleatoriamente">
+     <img id="random-cat-l" class="cat-l" src="./assets/img/gatitol1.png" alt="Gatito que cambia aleatoriamente">
   </section>
 
   <!-- Sobre Nosotros -->
   <section id="about" class="about">
     <h2>🐾 Sobre Nosotros 🐾</h2>
     <p>Somos una cafetería temática donde podés relajarte entre gatos rescatados mientras disfrutás un buen café artesanal.</p>
-    <img src="./assets/img/free-photo-of-cat-lying-on-pillow-of-sidewalk-cafe.jpeg" alt="Interior del cat café con gatos">
+    <img src="./assets/img/free-photo-of-cat-lying-on-pillow-of-sidewalk-cafe.jpeg" alt="Cat café">
   </section>
 
-  <!-- Galería de Gatitos -->
+  <!-- Galería -->
   <section id="gallery" class="gallery">
     <h2>🐾 Conocé a nuestros gatitos 🐾</h2>
     <div class="gallery-grid">
       <!-- Imágenes individuales -->
-      <img src="./assets/img/tabby-cat.jpg" alt="Gato 1">
-      <img src="./assets/img/orange-cat.jpg" alt="Gato 2">
-      <img src="./assets/img/black-cat.jpg" alt="Gato 3">
-      <img src="./assets/img/orange-cat-2.png" alt="Gato 4">
-      <img src="./assets/img/white-cat.jpg" alt="Gato 5">
-      <img src="./assets/img/siamese-cat.jpg" alt="Gato 6">
+       <div class="gallery-item">
+        <img src="./assets/img/tabby-cat.jpg" alt="Gato atigrado">
+        <span class="cat-tag">Misty</span>
+      </div>
+      <div class="gallery-item">
+        <img src="./assets/img/orange-cat.jpg" alt="Gato naranja">
+        <span class="cat-tag">Apolo</span>
+      </div>
+      <div class="gallery-item">
+        <img src="./assets/img/black-cat.jpg" alt="Gato negro">
+        <span class="cat-tag">Diana</span>
+      </div>
+      <div class="gallery-item">
+        <img src="./assets/img/orange-cat-2.png" alt="Gato naranja">
+        <span class="cat-tag">Tiger</span>
+      </div>
+      <div class="gallery-item">
+        <img src="./assets/img/white-cat.jpg" alt="Gato blanco">
+        <span class="cat-tag">Chema</span>
+      </div>
+      <div class="gallery-item">
+        <img src="./assets/img/siamese-cat.jpg" alt="Gato siamés">
+        <span class="cat-tag">Alfonso</span>
+      </div>
     </div>
   </section>
 
@@ -72,7 +93,7 @@
   <section id="menu" class="menu">
     <h2>🐾 Menú 🐾</h2>
     <ul>
-      <li>☕ Café Latte - $180</li>
+      <li>☕ Café Cappuccino - $180</li>
       <li>🍰 Tarta de zanahoria - $220</li>
       <li>🫖 Té chai - $150</li>
       <li>🥐 Croissant de almendras - $200</li>
@@ -83,10 +104,10 @@
   <section id="testimonials" class="testimonials">
     <h2>🐾 Lo que dicen nuestros visitantes 🐾</h2>
     <blockquote>
-      "Un lugar mágico. ¡Los gatos son amorosos y el café delicioso!" – Sofía
+      "Un lugar mágico. ¡Los gatos son amorosos y el café delicioso!" – María
     </blockquote>
     <blockquote>
-      "Ideal para relajarse después del trabajo. Siempre limpio y cálido." – Marcos
+      "Ideal para relajarse después del trabajo. Siempre limpio y cálido." – José
     </blockquote>
   </section>
 
@@ -94,14 +115,14 @@
   <section id="contact" class="contact">
     <h2>🐾 Contacto & Reservas 🐾</h2>
     <form>
-      <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" name="nombre" required>
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" name="name" required>
 
       <label for="email">Email:</label>
       <input type="email" id="email" name="email" required>
 
-      <label for="mensaje">Mensaje:</label>
-      <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+      <label for="message">Mensaje:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
 
       <button type="submit">Enviar</button>
     </form>
@@ -109,7 +130,7 @@
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Catpuccino. Todos los derechos reservados.</p>
+    <p>&copy; 2025 Catppuccino. Todos los derechos reservados.</p>
     <div class="social">
       <a href="#">Instagram</a>
       <a href="#">Facebook</a>

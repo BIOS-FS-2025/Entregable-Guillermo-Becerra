@@ -1,8 +1,9 @@
-/* ------------------------------
-   VARIABLES: Paleta y Diseño Base
-------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                           VARIABLES Y DISEÑO BASE                          */
+/* -------------------------------------------------------------------------- */
+
 :root {
-  /* Colores */
+  /* Paleta de Colores */
   --color-fondo: #fffaf5;
   --color-primario: #d4a373;      /* Café con leche */
   --color-secundario: #faedcd;    /* Crema */
@@ -22,9 +23,8 @@
   --sombra-suave: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* ------------------------------
-   RESET BÁSICO
-------------------------------- */
+/* ---------------------------------- RESET --------------------------------- */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -35,6 +35,8 @@ html {
   scroll-behavior: smooth;
 }
 
+/* ---------------------------------- BODY ---------------------------------- */
+
 body {
   font-family: var(--fuente-principal);
   background-color: var(--color-fondo);
@@ -42,9 +44,8 @@ body {
   line-height: 1.6;
 }
 
-/* ------------------------------
-   LAYOUT GENERAL
-------------------------------- */
+/* --------------------------------- GENERAL -------------------------------- */
+
 section {
   padding: var(--espaciado);
   max-width: 1200px;
@@ -69,9 +70,8 @@ img {
 }
 
 
-/* ------------------------------
-   RESPONSIVO
-------------------------------- */
+/* ------------------------------- RESPONSIVE ------------------------------- */
+
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;

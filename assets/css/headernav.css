@@ -1,6 +1,7 @@
-/* ------------------------------
-   HEADER Y NAV
-------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                HEADER Y NAV                                */
+/* -------------------------------------------------------------------------- */
+
 header {
   background-color: var(--color-secundario);
   padding: 1rem var(--espaciado);
@@ -41,8 +42,9 @@ nav a:hover {
   color: var(--color-primario);
 }
 
-/* ----- Menú hamburguesa ----- */
-#menu-toggle {
+/* ---------------------------- MENÚ HAMBURGUESA ---------------------------- */
+
+#menu-burger {
   display: none;
   font-size: 2rem;
   background: none;
@@ -52,7 +54,7 @@ nav a:hover {
 }
 
 @media (max-width: 768px) {
-  #menu-toggle {
+  #menu-burger {
     display: block;
   }
 
@@ -61,7 +63,7 @@ nav a:hover {
     width: 100%;
   }
 
-  nav.activo {
+  nav.active {
     display: block;
     margin-top: 1rem;
   }

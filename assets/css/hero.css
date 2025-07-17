@@ -1,13 +1,11 @@
-/* ------------------------------
-   HERO
-------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                    HERO                                    */
+/* -------------------------------------------------------------------------- */
+
 .hero {
   position: relative;
   max-width: 100vw !important;
   background-color: var(--color-primario);
-  /* background: url(../img/cat-cafe.jpg) center/cover no-repeat;
-  background-color: rgba(255, 255, 255, 0.5);
-  background-blend-mode: lighten; */
   color: var(--color-blanco);
   padding: 8rem 2rem;
   text-align: center;
@@ -74,8 +72,10 @@
   color: var(--color-blanco);
 }
 
-/* Imagen decorativa de gatito */
-.gatito-deco {
+/* --------------------------- Gatitos aleatorios --------------------------- */
+
+.cat-r,
+.cat-l {
   position: absolute;
   width: 10rem;
   height: auto;
@@ -85,12 +85,12 @@
   opacity: 0.95;
 }
 
-.gatito-deco:not(.inferior) {
+.cat-r {
   top: .5rem;
   right: 1rem;
 }
 
-.gatito-deco.inferior {
+.cat-l {
   bottom: 0;
   left: 1rem;
 }
@@ -105,7 +105,7 @@
   margin-top: 1rem;
 }
 
-.hero .secundario {
+.hero .secondary {
   font-family: var(--fuente-principal);
   font-weight: 500;
 }

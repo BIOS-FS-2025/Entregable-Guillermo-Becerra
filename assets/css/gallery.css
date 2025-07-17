@@ -1,6 +1,7 @@
-/* ------------------------------
-   GALERÍA
-------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                   GALERÍA                                  */
+/* -------------------------------------------------------------------------- */
+
 .gallery {
   margin-top: 5rem;
 }
@@ -18,7 +19,7 @@
   width: 100%;
 }
 
-/* ----- Galería animada ----- */
+/* ----------------------------- Galería animada ---------------------------- */
 .gallery-grid img {
   opacity: 0;
   transform: scale(0.95);
@@ -28,4 +29,24 @@
 .gallery-grid img.visible {
   opacity: 1;
   transform: scale(1);
+}
+
+/* -------------------------------- Etiquetas ------------------------------- */
+.gallery-item {
+  position: relative;
+  display: inline-block;
+}
+
+.cat-tag {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0.5rem;
+  background-color: var(--color-acento);
+  color: #fff;
+  font-size: 0.8rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 0.25rem;
+  font-family: var(--fuente-principal);
+  letter-spacing: 0.1rem;
+  font-weight: bold;
 }

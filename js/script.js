@@ -1,14 +1,20 @@
-// --- Menú hamburguesa ---
-const menuToggle = document.getElementById('menu-toggle');
+window.addEventListener('DOMContentLoaded', function () {
+  this.window.scrollTo(0,0);
+})
+
+/* ---------------------------- MENÚ HAMBURGUESA ---------------------------- */
+
+const menuBurger = document.getElementById('menu-burger');
 const navMenu = document.getElementById('nav-menu');
 
-menuToggle.addEventListener('click', () => {
-  navMenu.classList.toggle('activo');
+menuBurger.addEventListener('click', () => {
+  navMenu.classList.toggle('active');
 });
 
 
 
-// --- Galería animada (fade-in) ---
+/* ----------------------------- GALERÍA ANIMADA ---------------------------- */
+
 const galeria = document.querySelectorAll('.gallery-grid img');
 
 const observer = new IntersectionObserver((entries) => {
@@ -27,12 +33,16 @@ galeria.forEach(img => {
 
 
 
-// --- Gatito aleatorio en el hero ---
-const gatitoImg = document.getElementById('gatito-random');
-const cambiarBtn = document.getElementById('cambiar-gatito');
+/* -------------------------------------------------------------------------- */
+/*                         GATITO ALEATORIO EN EL HERO                        */
+/* -------------------------------------------------------------------------- */
 
-// Lista de imágenes disponibles
-const gatitos = [
+const catRImg = document.getElementById('random-cat-r');
+const changeBtn = document.getElementById('cat-change');
+const catLImg = document.getElementById('random-cat-l');
+
+// Gatitos de la esquina superior derecha
+const kittensR = [
   './assets/img/gatitor1.png',
   './assets/img/gatitor2.png',
   './assets/img/gatitor3.png',
@@ -40,31 +50,8 @@ const gatitos = [
   './assets/img/gatitor5.png'
 ];
 
-// Gatito actual (para evitar repetidos)
-let indiceActual = -1;
-
-function obtenerGatitoAleatorio() {
-  let nuevoIndice;
-  do {
-    nuevoIndice = Math.floor(Math.random() * gatitos.length);
-  } while (nuevoIndice === indiceActual && gatitos.length > 1);
-
-  indiceActual = nuevoIndice;
-  gatitoImg.src = gatitos[nuevoIndice];
-}
-
-// Mostrar uno al cargar
-window.addEventListener('DOMContentLoaded', obtenerGatitoAleatorio);
-
-// Cambiar gatito con el botón
-cambiarBtn.addEventListener('click', obtenerGatitoAleatorio);
-
-
-
-const gatitoImgSecundario = document.getElementById('gatito-random-secundario');
-
 // Gatitos de la esquina inferior izquierda
-const gatitosInferiores = [
+const kittensL = [
   './assets/img/gatitol1.png',
   './assets/img/gatitol2.png',
   './assets/img/gatitol3.png',
@@ -72,28 +59,40 @@ const gatitosInferiores = [
   './assets/img/gatitol5.png'
 ];
 
-let indiceInferiorActual = -1;
+// Gatitos actuales (para evitar repetidos al randomizar)
+let actualIndexR = 0;
+let actualIndexL = 0;
 
-function obtenerGatitoInferiorAleatorio() {
-  let nuevoIndice;
+/* ------------- Función para randomizar al gatito de la derecha ------------ */
+function getRandomCatR() {
+  let newIndex;
   do {
-    nuevoIndice = Math.floor(Math.random() * gatitosInferiores.length);
-  } while (nuevoIndice === indiceInferiorActual && gatitosInferiores.length > 1);
+    newIndex = Math.floor(Math.random() * kittensR.length);
+  } while (newIndex === actualIndexR && kittensR.length > 1);
 
-  indiceInferiorActual = nuevoIndice;
-  gatitoImgSecundario.src = gatitosInferiores[nuevoIndice];
+  actualIndexR = newIndex;
+  catRImg.src = kittensR[newIndex];
 }
 
-// Mostrar uno al cargar
-window.addEventListener('DOMContentLoaded', obtenerGatitoInferiorAleatorio);
+/* ------------- Función para randomizar al gatito de la izquierda ------------ */
+function getRandomCatL() {
+  let newIndex;
+  do {
+    newIndex = Math.floor(Math.random() * kittensL.length);
+  } while (newIndex === actualIndexL && kittensL.length > 1);
 
-// Cambiar al hacer clic
-cambiarBtn.addEventListener('click', obtenerGatitoInferiorAleatorio);
+  actualIndexL = newIndex;
+  catLImg.src = kittensL[newIndex];
+}
+
+// Cambiar gatitos con el botón
+changeBtn.addEventListener('click', getRandomCatR);
+changeBtn.addEventListener('click', getRandomCatL);
 
 // Cambiar párrafo
-cambiarBtn.addEventListener('click', () => {
-  const parrafoHero = document.getElementById('parrafo-hero');
-  if (parrafoHero) {
-    parrafoHero.textContent = '¡Donde podrás adoptar a nuestros gatitos!';
+changeBtn.addEventListener('click', () => {
+  const heroText = document.getElementById('hero-text');
+  if (heroText) {
+    heroText.textContent = '¡Te esperamos en Av. Gonzalo Ramírez 1473!';
   }
 });
