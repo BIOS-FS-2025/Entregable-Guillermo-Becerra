@@ -1,7 +1,3 @@
-window.addEventListener('DOMContentLoaded', function () {
-  this.window.scrollTo(0,0);
-})
-
 /* ---------------------------- MENÚ HAMBURGUESA ---------------------------- */
 
 const menuBurger = document.getElementById('menu-burger');
